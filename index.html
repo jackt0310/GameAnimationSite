@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Maze Explorer</title>
+        <meta name="description" content="Maze Explorer">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <img src="screenshots/title.PNG">
+        <!-- Objective -->
+        <div>
+            <h1>Objective</h1>
+            <p>Find key in maze and escape</p>
+        </div>
+        
+        <!-- Controls -->
+        <div>
+            <h1>Controls</h1>
+            <p>WASD - movement</p>
+            <p>Move mouse - turn camera</p>
+            <p>Left Click - sword attack</p>
+            <p>Move + Left Click - moving sword attack</p>
+            <p>Hold right click - draw bow</p>
+            <p>Release right click - fire bow</p>
+            <p>E - forward roll</p>
+            <p>F - Holy Hand Grenade</p>
+            <p>G - Self-destruct</p>
+            <p>R - Restart level (when dead)</p>
+            <p>Q - Change hymn (when more than one hymn unlocked)</p>
+            <p>C - Open Chests/Talk to NPCs</p>
+            <p>Esc - Pause Menu</p>
+        </div>
+        
+        <!-- Maze Generation -->
+        <div>
+            <h1>Maze Generation</h1>
+            <p>A new maze is automatically generated every time a scene is loaded (including when the player is killed and restarts the level)</p>
+        </div>
+        
+        <!-- Weapons and Movement Options-->
+        <div>
+            <h1>Weapons and Movement Options</h1>
+            <h2>Standing sword attack</h2>
+            <img class="showcase-img" src="screenshots/StandingSwordShowcase.gif" alt="Standing sword showcase">
+            <h2>Moving sword attack</h2>
+            <img class="showcase-img"  src="screenshots/MovingSwordShowcase.gif" alt="Moving sword showcase">
+            <h2>Bow and arrow</h2>
+            <img class="showcase-img"  src="screenshots/BowShowcase.gif" alt="Bow showcase">
+            <h2>Grenade throw</h2>
+            <img class="showcase-img"  src="screenshots/ExplosionShowcase.gif" alt="Explosion showcase">
+            <h2>Walking</h2>
+            <img class="showcase-img"  src="screenshots/WalkShowcase.gif" alt="Walk showcase">
+            <h2>Forward roll</h2>
+            <img class="showcase-img"  src="screenshots/RollShowcase.gif" alt="Roll showcase">
+        </div>
+        <!-- Collectibles -->
+        <div>
+            <h1>Collectibles</h1>
+            <!-- Key -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/KeyShowcase.gif" alt="Key showcase">
+                <h2>Key</h2>
+                <p>Opens gate to escape maze level</p>
+            </div>
+
+            <!-- Hymn -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/HymnShowcase.gif" alt="Hymn showcase">
+                <h2>Hymn</h2>
+                <p>Unlocks new music track to play while adventuring</p>
+            </div>
+
+            <!-- Gold -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/GoldShowcase.gif" alt="Gold showcase">
+                <h2>Gold</h2>
+                <p>Used to buy various items in the tavern</p>
+                  <span class="compact-list">
+                  <p>Brown = 10 gold</p>
+                  <p>Blue = 50 gold</p>
+                  <p>Red = 100 gold</p>
+                  <p>Green = 500 gold</p>
+                  </span>
+
+
+            </div>
+
+            <!-- Food -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/FoodShowcase.gif" alt="Food showcase">
+                <h2>Food</h2>
+                <p>Heals 50 HP</p>
+            </div>
+
+            <!-- Arrows -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/ArrowShowcase.gif" alt="Arrow showcase">
+                <h2>Arrows</h2>
+                <p>Gives 15 arrows</p>
+                <p>(When received from chest, grants arrow upgrade of +15 arrows)</p>
+            </div>
+
+            <!-- Grenades -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/GrenadeShowcase.gif" alt="Grenade showcase">
+                <h2>Grenades</h2>
+                <p>Gives 5 grenades</p>
+                <p>(When received from chest, grants arrow upgrade of +5 grenades)</p>
+            </div>
+
+            <!-- Grail -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/GrailShowcase.gif" alt="Grenade showcase">
+                <h2>Grail</h2>
+                <p>Grants an HP upgrade of +50HP</p>
+            </div>
+        </div>
+    
+        <!-- Tavern -->
+        <div>
+            <h1>Tavern</h1>
+            <!-- Barrel?? -->
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/BarrelShowcase.gif" alt="Barrel showcase">
+                    <h2>Barrel??</h2>
+                <p>Sells hymns for 500 gold</p>
+            </div>
+            
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/Bandit1Showcase.gif" alt="Bandit1 showcase">
+                    <h2>Bandit 1</h2>
+                <p>Sells grenade upgrades for 1000 gold</p>
+            </div>
+            
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/Bandit2Showcase.gif" alt="Bandit2 showcase">
+                    <h2>Bandit 2</h2>
+                <p>Sells arrow upgrades for 1000 gold</p>
+            </div>
+            
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/BarkeeperShowcase.gif" alt="Barkeeper showcase">
+                    <h2>Barkeeper</h2>
+                <p>Sells health upgrades for 5000 gold</p>
+            </div>
+            
+             <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/ChickenShowcase.gif" alt="Chicken showcase">
+                    <h2>Giant Chicken</h2>
+                <p>It's a chicken</p>
+            </div>
+        </div>
+        
+        <!-- Other -->
+        <div>
+            <h1>Other</h1>
+            <h2>Difficulty Levels</h2>
+            <h3>Easy</h3>
+            <ul class="list">
+                <li>Infinite arrows</li>
+                <li>Infinite grenades</li>
+                <li>Ghosts move slower</li>
+                <li>Ghosts spawn less frequently</li>
+            </ul>
+            <h3>Medium</h3>
+            <ul class="list">
+                <li>30 arrows</li>
+                <li>10 grenades</li>
+                <li>Ghosts move at a normal speed</li>
+                <li>Ghosts spawn at a normal rate</li>
+            </ul>
+            <h3>Hard</h3>
+            <ul class="list">
+                <li>15 arrows</li>
+                <li>5 grenades</li>
+                <li>Ghosts move quickly in later levels</li>
+                <li>Ghosts spawn very frequently in later levels</li>
+            </ul>
+            <div class="showcase-div tall" height=100em>
+                <img class="showcase-img tall-img" src="screenshots/GhostShowcase.gif" alt="Ghost showcase">
+                    <h2>Ghosts</h2>
+                <p>Deal 50 damage to player before despawning</p>
+                <p>Drops</p>
+                <ul class="list indent">
+                    <li>Arrows (if needed) - 8% chance</li>
+                    <li>Grenades (if need) - 8% chance</li>
+                    <li>Food (if needed) - 8% chance</li>
+                    <li>10 gold - remaining% chance</li>
+                </ul>
+                <p>Die in one hit</p>
+            </div>
+            <div class="showcase-div">
+                <img class="showcase-img" src="screenshots/ChestShowcase.gif" alt="Chest showcase">
+                    <h2>Chests</h2>
+                <p>2-5 chests spawn per map</p>
+                <ul class="list indent">
+                    <li>2 chests - 40% chance</li>
+                    <li>3 chests - 30% chance</li>
+                    <li>4 chests - 20% chance</li>
+                    <li>5 chests - 10% chance</li>
+                </ul>
+            </div>
+            <br />
+            Contains:
+            <ul class="list">
+                <img class="pie" src="screenshots/ChartPie.PNG" alt="Pie chart for chest spawns">
+                <li>50 gold - 30% chance</li>
+                <li>Hymn - 30% chance</li>
+                <li>100 gold - 20% chance</li>
+                <li>500 gold - 7% chance</li>
+                <li>Arrow upgrade - 5% chance</li>
+                <li>Grenade upgrade - 5% chance</li>
+                <li>Health upgrade - 3% chance</li>
+            </ul>
+        </div>
+        
+        <!-- Levels -->
+        <div>
+            <h1>Levels</h1>
+            
+            <!-- Level 1 -->
+            <div>
+                <h2>Level 1</h2>
+                <img class="showcase-img taller-img" src="screenshots/Level1.PNG" alt="Level 1">
+
+                <h3>Ghost speed</h3>
+                <ul class="list">
+                    <li>Easy - 4</li>
+                    <li>Medium - 6</li>
+                    <li>Hard - 6</li>
+                </ul>
+                <h3>Ghost spawn rate</h3>
+                <ul class="list">
+                    <li>Easy - Every 10 seconds</li>
+                    <li>Medium - Every 10 seconds</li>
+                    <li>Hard - Every 10 seconds</li>
+                </ul>
+                <h3>Reward for completion</h3>
+                <p>500 gold</p>
+            </div>
+            <br />
+            
+            <!-- Level 2 -->
+            <div>
+                <h2>Level 2</h2>
+                <img class="showcase-img taller-img" src="screenshots/Level2.PNG" alt="Level 2">
+                <h3>Ghost speed</h3>
+                <ul class="list">
+                    <li>Easy - 4.41</li>
+                    <li>Medium - 6.6</li>
+                    <li>Hard - 7.2</li>
+                </ul>
+                <h3>Ghost spawn rate</h3>
+                <ul class="list">
+                    <li>Easy - Every 9.7 seconds</li>
+                    <li>Medium - Every 9.4 seconds</li>
+                    <li>Hard - Every 8.8 seconds</li>
+                </ul>
+                <h3>Reward for completion</h3>
+                <p>500 gold</p>
+            </div>
+            
+            <br />
+            
+            <!-- Level 3 -->
+            <div>
+                <h2>Level 3</h2>
+                <img class="showcase-img taller-img" src="screenshots/Level3.PNG" alt="Level 3">
+                <h3>Ghost speed</h3>
+                <ul class="list">
+                    <li>Easy - 4.62</li>
+                    <li>Medium - 7.2</li>
+                    <li>Hard - 8.4</li>
+                </ul>
+                <h3>Ghost spawn rate</h3>
+                <ul class="list">
+                    <li>Easy - Every 9.4 seconds</li>
+                    <li>Medium - Every 8.8 seconds</li>
+                    <li>Hard - Every 7.6 seconds</li>
+                </ul>
+                <h3>Reward for completion</h3>
+                <p>500 gold</p>
+            </div>
+            <br />
+            
+            <!-- Level 4 -->
+            <div>
+                <h2>Level 4</h2>
+                <img class="showcase-img taller-img"  src="screenshots/Level4.PNG" alt="Level 4">
+                <h3>Ghost speed</h3>
+                <ul class="list">
+                    <li>Easy - 4.83</li>
+                    <li>Medium - 7.8</li>
+                    <li>Hard - 9.6</li>
+                </ul>
+                <h3>Ghost spawn rate</h3> 
+                <ul class="list">
+                    <li>Easy - Every 9.1 seconds</li>
+                    <li>Medium - Every 8.2 seconds</li>
+                    <li>Hard - Every 6.4 seconds</li>
+                </ul>
+                <h3>Reward for completion</h3>
+                <p>1000 gold</p>
+            </div>
+            
+            <br />
+        </div>
+        
+        <!-- Hymns -->
+        <div>
+            <h1>Hymns</h1>
+            <h2>Music</h2>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N8mtUCVfXeU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Dungeons and Dragons - Alexander Nakarade</h3>
+            <p>Dungeons And Dragons by Alexander Nakarada | https://www.serpentsoundstudios.com</p>
+            <p>Music promoted by https://www.free-stock-music.com</p>
+            <p>Attribution 4.0 International (CC BY 4.0)</p>
+            <p>https://creativecommons.org/licenses/by/4.0/</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WIx4srqU3BE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Thine Ankles Shan't Lie - Shakira</h3>
+            <p>Medieval cover of Hips Don't Lie by Shakira</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wrrOJOSwK7s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Farewell Farewell Farewell - NSYNC</h3>
+            <p>Medieval cover of Bye Bye Bye by NSYNC</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YhjyEMMh7Ew" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Thine Watermelon Sugar - Harry Styles</h3>
+            <p>Medieval cover of Watermelon Sugar by Harry Styles</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpxBoC3k7PU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>QUITE UNPLEASANT! - XXXTentacion</h3>
+            <p>Medieval cover of SAD! by XXXTentacion</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hao9v1SvP9w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Bringeth Holy Back - Justin Timberlake</h3>
+            <p>Medieval cover of Sexyback by Justin Timberlake</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cRIfsFefatg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Buskin Boots - Foster the People</h3>
+            <p>Medieval cover of Pumped Up Kicks by Foster the People</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jkTvY8ZLZ-g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Ievan Polkka</h3>
+            <p>Medieval cover of Ievan Polkka</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ch1aVmjvYTI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Thou Art Somebody Whom I Used To Know - Gotye</h3>
+            <p>Medieval cover of Somebody That I Used To Know by Gotye</p>
+            
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BmWjMw8vlxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Stench of Youthful Soul - Nirvana</h3>
+            <p>Medieval cover of Smells Like Teen Spirit by Nirvana</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sf69HCBAfwA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Tis No Sunshine - Bill Withers</h3>
+            <p>Medieval cover of Ain't No Sunshine by Bill Withers</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/s8zEPlxaiK4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Wheat And Potatoes (WAP) - Cardi B feat Megan Thee Stallion</h3>
+            <p>Medieval cover of WAP by Cardi B feat Megan Thee Stallion</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8kY7-TZMRJw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Thine Affection Towards California - 2Pac feat Dr. Dre and Roger Troutman</h3>
+            <p>Medieval cover of California Love by 2Pac feat Dr. Dre and Roger Troutman</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fcUnsBE7-MY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Absurd Occurrences - Kyle Dixon & Michael Stein</h3>
+            <p>Medieval cover of Stranger Things Theme by Kyle Dixon & Michael Stein</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wez37IUGsuQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Bury Thine Friend - Billie Eilish</h3>
+            <p>Medieval cover of Bury A Friend by Billie Eilish</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/E33l2D8k6UU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Bound II - Kanye West</h3>
+            <p>Medieval cover of Bound 2 by Kanye West</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/95sD04GL-IM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Where Art Thine Kingdom - DMX</h3>
+            <p>Medieval cover of Where The Hood At by DMX</p>
+            
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc70hHBNw7s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>I Hath Five Upon Thee</h3>
+            <p>Medieval cover of I Got 5 On It by Luniz</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/q7dnX-Bqnao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>No Peasants - TLC</h3>
+            <p>Medieval cover of No Scrubs by TLC</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PK7Bbr_WI-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Because I Smoketh The Bud - Afroman</h3>
+            <p>Medieval cover of Because I Got High by Afroman</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bMfu_jXcu00" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Whatever Thou Sayeth I Am - Eminem</h3>
+            <p>Medieval cover of The Way I Am by Eminem</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RZ4H0KJezNE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Striken By Thunder - AC/DC</h3>
+            <p>Medieval cover of Thunderstruck by AC/DC</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7L1ZiQm1Qnw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>It Shall Be None But I - NSYNC</h3>
+            <p>Medieval cover of It's Gonna Be Me by NSYNC</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y6aT3e3J0BI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>The King's Regulators - Warren G & Nate Dogg</h3>
+            <p>Medieval cover of Regulate by Warren G & Nate Dogg</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F7XSGdSjkLg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Under Thy Spell - The Notorious B.I.G.</h3>
+            <p>Medieval cover of Hypnotize by The Notorious B.I.G.</p>
+        </div>
+        
+        <!-- Sources -->
+        <div>
+            <h1>Sources</h1>
+            <h2>3D Models</h2>
+            <p><a href="https://www.turbosquid.com/3d-models/3d-model-pbr-armour-1397198">Knight</a></p>
+            
+            <p><a href="https://www.turbosquid.com/3d-models/free-obj-mode-pendant-design/841896">Key</a></p>
+            
+            <p><a href="https://www.cgtrader.com/free-3d-models/interior/house/teru-teru-bozu">Ghost (Teru Teru Bozu)</a></p>
+            
+            <p><a href="https://assetstore.unity.com/packages/3d/props/furniture/reinforced-wooden-chest-68139">Reinforced Wooden Chest</a></p>
+            
+            <p><a href="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/basic-bandit-89978">Basic Bandit</a></p>
+            
+            <p><a href="https://assetstore.unity.com/packages/3d/characters/animals/meshtint-free-chicken-mega-toon-series-151842">Meshtint Free Chicken Mega Toon Series</a></p>
+            
+            <p><a href="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-pack-122225">Lowpoly Medieval Peasants</a></p>
+            
+            <p><a href="https://assetstore.unity.com/packages/3d/props/furniture/medieval-tavern-pack-112546">Medieval Tavern Pack</a></p>
+            
+            <p><a href="https://www.cgtrader.com/items/252978/download-page">Sword of Artorias</a></p>
+            
+            <p><a href="https://www.cgtrader.com/items/626437/download-page">Bow and Arrow</a></p>
+            
+            <p><a href="https://sketchfab.com/3d-models/monty-python-holy-hand-grenade-4ca2357686384032bd56f64a837be23c">Holy Hand Grenade</a></p>
+            
+            <p><a href="https://www.turbosquid.com/3d-models/3d-holy-grail-model-1419475">Holy Grail</a></p>
+            
+            <p><a href="https://www.cgtrader.com/items/648937/download-page">Chicken Leg</a></p>
+            
+            <p><a href="https://www.cgtrader.com/items/632225/download-page">Music Note</a></p>
+            
+            <p><a href="https://free3d.com/3d-model/bag-of-gold-v1--110517.html">Bag of Gold</a></p>
+            
+            <h2>Textures</h2>
+            <p><a href="https://i.pinimg.com/originals/b3/70/81/b370810309dc2f441f64e06f5c88ebb8.jpg">Dungeon ground</a></p>
+            <p><a href="https://www.wildtextures.com/wp-content/uploads/wildtextures_big-stone-wall-4k-480x480.jpg">Brick wall</a></p>
+            
+            <h2>SFX</h2>
+            <p><a href="https://freesound.org/people/Black%20Snow/sounds/109414/">Sword Slice 05</a></p>
+            <p><a href="https://freesound.org/people/fabian13cz/sounds/511502/">Knight Walking On Hard Ground 2</a></p>
+            <p><a href="https://freesound.org/people/bone666138/sounds/198874/">Fanfare</a></p>
+            <p><a href="https://freesound.org/people/Fidjo20/sounds/503537/">Ow</a></p>
+            <p><a href="http://soundbible.com/1615-Metal-Drop.html">Metal Drop</a></p>
+            <p><a href="https://freesound.org/people/elynch0901/sounds/464487/">Robotic Male Grunting In Pain</a></p>
+            <h2>Other</h2>
+            <p><a href="https://www.dafont.com/ancient.font">Ancient Font</a></p>
+            <p><a href="https://assetstore.unity.com/packages/essentials/tutorial-projects/unity-particle-pack-127325">Unity Particle Pack</a></p>
+        </div>
+    </body>
+</html>
