@@ -48,6 +48,32 @@ img {
     max-width: 95%;
 }
 
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #EEEEEE;
+}
+
+ul#navbar li {
+    float:left;
+}
+
+ul#navbar li a {
+    display: block;
+    color: #000000;
+    font-weight:bold;
+    padding: 8px 11px;
+    text-decoration: none;
+}
+
+ul#navbar li a:hover {
+    background-color: grey;
+    color: white;
+}
+
 .showcase-div {
     height:15em;
     line-height: 1.0;
