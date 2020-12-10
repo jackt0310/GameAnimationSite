@@ -33,18 +33,22 @@
         <!-- Framework -->
         <div>
             <h1>Framework</h1>
-            <h3>Player Animation Script</h3>
-            <p>Player aniamtions include an idle state, a walking state, a rolling state, a standing sword attack, and a walking sword attack. All animation was done using blender and imported to Unity.</p>
+            <h3>Animations</h3>
+            <p>The custom animations created for this project were a player idle state, a player walk, a player roll, a player standing sword attack, a player walking sword attack, an idle animation for the ghost enemy, the bow being drawn, the bow being released, and the spinning key animation. All of these animations were done in Blender. For the player model, it was necessary to create a custom skeleton rig by creating bones and assigning weight values to these bones. From there on, keyframe animation was used to make the actual animation actions. The animations were then imported to Unity and controlled using an Animation Controller object along with boolean variables and triggers throughout different scripts.</p>
+            <p>The death animation for the character utilizes a form of fracturing, as the player object is instantly replaced by individual components making up the player's body. Each of these components has its own Rigidbody component attached, and this results in a general collapsing effect to give the appearance of the Player suit of armor falling to pieces upon death.</p>
             <h3>Maze Generation Script</h3>
             <p>The mazes are generated using the hunt and kill algorithm. Each maze is unique and is generated upon start or the game, player death, and different levels. The walls and floors are prefabs that the algorithm uses to put together to make the maze. Both walls and floors have their own textures. Every maze is a perfect maze, only one path to the exit.</p>
+            <h3>Tavern</h3>
+            <p>The tavern scene itself was a Unity Store asset. The characters inside the tavern are also from the asset store. Unity's Rigidbody component was used on the stools so you can kick them around.</p>
+            <p>A basic dialogue system was implemented by activating a given character's Canvas Panel window (shop), dialogue box, and portrait when the player is close enough to that character and presses the dialogue button (C).</p>
+            <h3>Music</h3>
+            <p>Background music and sound effects were implemented by importing .wav and .mp3 files and using Unity Audio Source object to control sound. The background music has a complicated system in place in order to support the many different "hymns" which can be unlocked. It uses a series of arrays: one with information about the song (for the UI), one with the actual sound object to be played, and one with a boolean designating whether or not the song has been unlocked. This last array determines whether or not songs can be switched to in the queue (either by the player or by the last song finishing). Each song in the project is actually compressed until it needed. Originally, the implementation had each song decompress at the beginning of the scene, but this created an enormous load time.</p>
+            <h2>Random spawning</h2>
+            <p>There exists a Plane GameObject on the Game scene with a spawning script. This script gets the dimensions of the plane for possible spawn coordinates, and initializes a variety of different things throughout the maze (ghosts, chests and keys). These spawn rates can be controlled through variables such as SpawnRate, InitSpawnAmt (inital spawn amount) and MaxSpawnAmt (max spawn amount).</p>
             <h3>Enemies</h3>
             <p>Ghosts are set to hover through the maze toward the character. They reduce the health of the character if within a certain distance, or they kill the character restarting the level.</p>
-            <h3>Tavern</h3>
-            <p>The tavern was off of the unity asset store. The characters inside the tavern are also from the asset store. Unity collision handler was used on the stools so you can kick them around.</p>
-            <h3>Music</h3>
-            <p>Background music and sound effects were done by importing .wav files and using Unity Audio Source object to control sound.</p>
             <h3>Chests</h3>
-            <p>Chests were randomly placed throughout the maze with random items inside. A breakdown of the items can be found in the "Other" Section.</p>
+            <p>Chests spawn randomly throughout each individual level. Each chest has a random chance of then spawning different items. A breakdown of the possible items and chest amounts with the relevant probabilities of occurance can be found in the "Other" Section.</p>
         </div>
 
         <!-- Demo Video -->
